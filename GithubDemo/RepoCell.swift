@@ -27,10 +27,13 @@ class RepoCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        descriptionLabel.preferredMaxLayoutWidth = descriptionLabel.frame.size.width
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         
         repoLabel.preferredMaxLayoutWidth = 120
     }

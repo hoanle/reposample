@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bFM-SW-Kn8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="165" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bFM-SW-Kn8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" rowHeight="137" id="jeD-Fb-eGC" customClass="RepoCell" customModule="GithubDemo" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" rowHeight="165" id="jeD-Fb-eGC" customClass="RepoCell" customModule="GithubDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="jeD-Fb-eGC" id="FyZ-jw-Gr6">
@@ -42,19 +42,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Stars: 1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBQ-8h-NH5">
-                                                    <rect key="frame" x="116" y="72" width="88" height="31"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks: 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvb-HD-94M">
-                                                    <rect key="frame" x="249" y="82" width="62" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description: Test test test test tets tets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-cp-dk9">
-                                                    <rect key="frame" x="116" y="105" width="296" height="21"/>
+                                                    <rect key="frame" x="116" y="72" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -65,23 +53,37 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description: Test test test test tets tets" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-cp-dk9">
+                                                    <rect key="frame" x="8" y="135" width="304" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Forks: 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvb-HD-94M">
+                                                    <rect key="frame" x="116" y="101" width="62" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="FyZ-jw-Gr6" secondAttribute="topMargin" constant="8" id="0Xd-wZ-dRY"/>
+                                                <constraint firstAttribute="bottom" secondItem="DBh-cp-dk9" secondAttribute="bottom" constant="8" id="1ni-Uf-N8s"/>
+                                                <constraint firstItem="Pvb-HD-94M" firstAttribute="top" secondItem="uBQ-8h-NH5" secondAttribute="bottom" constant="8" id="3GI-MP-G43"/>
                                                 <constraint firstItem="uBQ-8h-NH5" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="6ue-XM-WNr"/>
+                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="leading" secondItem="FyZ-jw-Gr6" secondAttribute="leading" constant="8" id="CNM-VC-9Yq"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vOo-vZ-Toi" secondAttribute="trailing" constant="8" id="DAg-ER-zgH"/>
                                                 <constraint firstItem="QKm-z5-FMi" firstAttribute="top" secondItem="vOo-vZ-Toi" secondAttribute="bottom" constant="8" id="ElU-OP-49i"/>
-                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="GDT-C4-yko"/>
                                                 <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="vOo-vZ-Toi" secondAttribute="top" id="Ie8-G7-hHU"/>
                                                 <constraint firstItem="uBQ-8h-NH5" firstAttribute="top" secondItem="QKm-z5-FMi" secondAttribute="bottom" constant="8" id="J37-BP-P7h"/>
+                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="top" secondItem="Pvb-HD-94M" secondAttribute="bottom" constant="8" id="MNf-Wo-XbB"/>
+                                                <constraint firstAttribute="trailing" secondItem="DBh-cp-dk9" secondAttribute="trailing" constant="8" id="Nwi-8P-NxO"/>
                                                 <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="FyZ-jw-Gr6" secondAttribute="top" constant="16" id="Vhw-xc-GAs"/>
-                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="top" secondItem="Pvb-HD-94M" secondAttribute="bottom" constant="2" id="ffi-x7-5Of"/>
+                                                <constraint firstItem="Pvb-HD-94M" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="dTg-3f-hgH"/>
                                                 <constraint firstItem="IDT-UQ-mtu" firstAttribute="leading" secondItem="FyZ-jw-Gr6" secondAttribute="leadingMargin" id="kxj-Ax-Hgn"/>
                                                 <constraint firstItem="QKm-z5-FMi" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="o0R-rG-Und"/>
                                                 <constraint firstItem="vOo-vZ-Toi" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="p0y-XP-zYY"/>
-                                                <constraint firstAttribute="bottom" secondItem="DBh-cp-dk9" secondAttribute="bottom" constant="10" id="qWf-wu-M7u"/>
                                                 <constraint firstItem="IDT-UQ-mtu" firstAttribute="leading" secondItem="FyZ-jw-Gr6" secondAttribute="leading" constant="8" id="rrG-bN-b72"/>
-                                                <constraint firstItem="Pvb-HD-94M" firstAttribute="leading" secondItem="QKm-z5-FMi" secondAttribute="trailing" constant="8" id="zuq-wr-T7t"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
