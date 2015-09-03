@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kcP-vE-O7S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kcP-vE-O7S">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Repo Finder-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GithubDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,15 +14,104 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bFM-SW-Kn8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" rowHeight="137" id="jeD-Fb-eGC" customClass="RepoCell" customModule="GithubDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="jeD-Fb-eGC" id="FyZ-jw-Gr6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-UQ-mtu">
+                                                    <rect key="frame" x="8" y="16" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="GAf-9f-SI0"/>
+                                                        <constraint firstAttribute="height" constant="100" id="TCZ-9R-QTj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo  " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOo-vZ-Toi">
+                                                    <rect key="frame" x="116" y="16" width="48" height="19"/>
+                                                    <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Stars: 1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBQ-8h-NH5">
+                                                    <rect key="frame" x="116" y="72" width="88" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks: 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvb-HD-94M">
+                                                    <rect key="frame" x="249" y="82" width="62" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description: Test test test test tets tets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-cp-dk9">
+                                                    <rect key="frame" x="116" y="105" width="296" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner: Hoan Le" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKm-z5-FMi">
+                                                    <rect key="frame" x="116" y="43" width="125" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="FyZ-jw-Gr6" secondAttribute="topMargin" constant="8" id="0Xd-wZ-dRY"/>
+                                                <constraint firstItem="uBQ-8h-NH5" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="6ue-XM-WNr"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vOo-vZ-Toi" secondAttribute="trailing" constant="8" id="DAg-ER-zgH"/>
+                                                <constraint firstItem="QKm-z5-FMi" firstAttribute="top" secondItem="vOo-vZ-Toi" secondAttribute="bottom" constant="8" id="ElU-OP-49i"/>
+                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="GDT-C4-yko"/>
+                                                <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="vOo-vZ-Toi" secondAttribute="top" id="Ie8-G7-hHU"/>
+                                                <constraint firstItem="uBQ-8h-NH5" firstAttribute="top" secondItem="QKm-z5-FMi" secondAttribute="bottom" constant="8" id="J37-BP-P7h"/>
+                                                <constraint firstItem="IDT-UQ-mtu" firstAttribute="top" secondItem="FyZ-jw-Gr6" secondAttribute="top" constant="16" id="Vhw-xc-GAs"/>
+                                                <constraint firstItem="DBh-cp-dk9" firstAttribute="top" secondItem="Pvb-HD-94M" secondAttribute="bottom" constant="2" id="ffi-x7-5Of"/>
+                                                <constraint firstItem="IDT-UQ-mtu" firstAttribute="leading" secondItem="FyZ-jw-Gr6" secondAttribute="leadingMargin" id="kxj-Ax-Hgn"/>
+                                                <constraint firstItem="QKm-z5-FMi" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="o0R-rG-Und"/>
+                                                <constraint firstItem="vOo-vZ-Toi" firstAttribute="leading" secondItem="IDT-UQ-mtu" secondAttribute="trailing" constant="8" id="p0y-XP-zYY"/>
+                                                <constraint firstAttribute="bottom" secondItem="DBh-cp-dk9" secondAttribute="bottom" constant="10" id="qWf-wu-M7u"/>
+                                                <constraint firstItem="IDT-UQ-mtu" firstAttribute="leading" secondItem="FyZ-jw-Gr6" secondAttribute="leading" constant="8" id="rrG-bN-b72"/>
+                                                <constraint firstItem="Pvb-HD-94M" firstAttribute="leading" secondItem="QKm-z5-FMi" secondAttribute="trailing" constant="8" id="zuq-wr-T7t"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="IDT-UQ-mtu" id="fq8-Bj-dOn"/>
+                                            <outlet property="descriptionLabel" destination="DBh-cp-dk9" id="rEw-h9-fBP"/>
+                                            <outlet property="forksLabel" destination="Pvb-HD-94M" id="2g0-uv-T6C"/>
+                                            <outlet property="ownerLabel" destination="QKm-z5-FMi" id="Tdy-aQ-lCS"/>
+                                            <outlet property="repoLabel" destination="vOo-vZ-Toi" id="fwS-mG-4DA"/>
+                                            <outlet property="starLabel" destination="uBQ-8h-NH5" id="3wq-4K-YSU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bFM-SW-Kn8" secondAttribute="trailing" id="1pE-2V-AzF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bFM-SW-Kn8" secondAttribute="bottom" id="87s-Bz-VfB"/>
+                            <constraint firstItem="bFM-SW-Kn8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gqD-HM-PDb"/>
+                            <constraint firstItem="bFM-SW-Kn8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pjS-5X-bg3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="x5q-EH-pP8"/>
+                    <navigationItem key="navigationItem" title="Repo Finder" id="x5q-EH-pP8"/>
+                    <connections>
+                        <outlet property="tableView" destination="bFM-SW-Kn8" id="fI9-Ft-9NJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="-557"/>
+            <point key="canvasLocation" x="436" y="-528"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpP-oR-azb">
@@ -39,7 +129,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dru-y2-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-557"/>
+            <point key="canvasLocation" x="70.400000000000006" y="-527.29333333333329"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
